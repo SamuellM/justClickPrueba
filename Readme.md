@@ -1,8 +1,8 @@
 <h1> README.MD </h1>
 
 • La base de datos de MySQL y Elastic Search se desplegaron en un servidor linode utilizando docker.
-http://li1155-138.members.linode.com:9200/user_agent/_search
-mysql://35.192.84.67:3306/clickdb
+- http://li1155-138.members.linode.com:9200/user_agent/_search
+- mysql://35.192.84.67:3306/clickdb
 
 • max_value se definio en 3. pasado de esto o en caso que el usuario no exista será redirigido a la pagina not found 404.
 
