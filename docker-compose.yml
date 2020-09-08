@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  notification:
+    build: . 
+    hostname: 10.181.131.34
+    container_name: B4E_Notification_version_1.0
+    image: chefarina/notification:1.0
+    ports:
+      - "2036:2036"
+    restart: always
+    volumes:
+      - /dockervollog/CHFarina/notifications:/app/log
+      - /dockervolapps/CHFarina/notifications/build/config:/app/config
+    networks:
+      - chfarinanetwork
+networks:
+  chfarinanetwork:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.33.0.0/16
